@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         boolean isInInnerLoop = false;
 
-/*
+
         buttonAccelerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-        });*/
-        buttonAccelerate.setOnTouchListener(new View.OnTouchListener() {
+        });
+/*        buttonAccelerate.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View arg0, MotionEvent arg1) {
 
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             }
-        });
+        });*/
         imSteering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
