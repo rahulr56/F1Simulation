@@ -65,57 +65,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("TRACK DETAILS", "Outer Height End" + Integer.toString(outerTrackHEnd));
                 Log.d("TRACK DETAILS", "Outer Width Start" + Integer.toString(outerTrackWStart));
                 Log.d("TRACK DETAILS", "Outer Width End" + Integer.toString(outerTrackWEnd));
- /*               ImageView car = (ImageView) findViewById(R.id.imageViewCar);
-
-                float trackHeight = track.getHeight();
-                float trackWidth = track.getWidth();
-
-                Log.d("IN TRACK DETAILS","Image Height"+Float.toString(track.getHeight()));
-                Log.d("IN TRACK DETAILS","Image Width"+Float.toString(track.getWidth()));
-                Toast.makeText(getApplicationContext(), Float.toString(trackHeight)+" :H W: "+Float.toString(trackWidth), Toast.LENGTH_SHORT).show();
-               if (left && !(bottom || top || right))
-                {
-//                    Log.d("DEBUG", "Car position : "+Float.toString(car.getX()));
-                    car.setY(car.getY() + stepSize);
-                    if(car.getY() + stepSize > trackHeight)
-                    {
-                        left = false;
-                        bottom = true;
-                    }
-                }
-                else if (bottom && !(top|| right || left ))
-                {
-                    car.setX(car.getX() + stepSize);
-                    if (car.getX() + stepSize >= trackWidth)
-                    {
-                        bottom = false;
-                        right = true;
-                    }
-                }
-                else if (right && !(bottom || top || left ))
-                {
-                    car.setY(car.getY() - stepSize);
-                    if(car.getY() - stepSize < 0) {   // top of the track
-                        right = false;
-                        top = true;
-                    }
-                }
-                else if(top && !(bottom || right || left))
-                {
-                    car.setX(car.getX() - stepSize);
-                    if(car.getX() - stepSize <= 0)
-                    {
-                        top = false;
-                        left = true;
-                    }
-                }*/
             }
         });
         imSteering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ImageView car = findViewById(R.id.imageViewCar);
-
                 if (innerLoop) {
                     innerLoop = false;
                     if (bottom) {
@@ -159,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
                 ImageView imSteering = findViewById(R.id.imageViewSteering);
                 if (started) {
                     started = false;
+                    breaked =  true;
+                    accelerated = false;
                     buttonBreak.setVisibility(View.INVISIBLE);
                     buttonAccelerate.setVisibility(View.INVISIBLE);
                     imSteering.setVisibility(View.INVISIBLE);
