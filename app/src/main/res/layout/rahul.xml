@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+          <ImageView
+              android:id="@+id/imageViewTrack"
+              android:layout_width="266dp"
+              android:layout_height="366dp"
+              android:layout_marginBottom="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.0"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintVertical_bias="0.0"
+              app:srcCompat="@drawable/track" />
+
+        <ImageView
+            android:layout_width="65px"
+            android:layout_height="35px"
+            android:layout_alignLeft="@+id/imageViewTrack"
+            android:layout_alignStart="@+id/imageViewTrack"
+            android:layout_alignTop="@+id/imageViewTrack"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/car"
+            android:id="@+id/imageViewCar"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="42dp" />
+              </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="139dp"
+        android:layout_height="367dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imageViewSteering"
+        android:layout_toRightOf="@+id/imageViewSteering"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rahul" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayoutSteering"
+        android:layout_width="405dp"
+        android:layout_height="213dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="252dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageViewSteering"
+            android:layout_width="151dp"
+            android:layout_height="168dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/l1" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewSteering"
+            android:gravity="bottom|center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonBreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:padding="15px"
+                android:text="Break" />
+
+            <Button
+                android:id="@+id/buttonStartStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:padding="35px"
+                android:text="Start/Stop" />
+
+            <Button
+                android:id="@+id/buttonAccelerate"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:padding="15px"
+                android:text="Accelerate" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
